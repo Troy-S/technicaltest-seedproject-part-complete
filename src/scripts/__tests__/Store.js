@@ -12,11 +12,27 @@ import mockData from "../../../public/db.json";
  */
 
 describe("filter", () => {
+  /**
+   * After reading Jest docs it recommends using global beforeEach and pairing
+   * with afterEach, this is called the "setup" & "teardown" phase.
+   * This means we can remove a lot of our "Arrange" code to keep in line with
+   * DRY principles
+   */
+  let storeUnitTest;
+
+  // Setup phase
+  beforeEach(() => {
+    // Arrange
+    storeUnitTest = new Store();
+    storeUnitTest.setDeals(mockData.deals)
+  });
+
+  // Teardown phase
+  afterEach(() => {
+    storeUnitTest.unmount();
+  });
 
   it("should return all deals when no filters applied", () => {
-    // Arrange
-    const storeUnitTest = new Store();
-    storeUnitTest.setDeals(mockData.deals);
     // Act
     const result = storeUnitTest.deals;
     // Assert
@@ -24,11 +40,13 @@ describe("filter", () => {
   });
 
   it("should return broadband deals when filtered by broadband", () => {
-    // Arrange
-    const storeUnitTest = new Store();
-    storeUnitTest.setDeals(mockData.deals);
-    // Act - Use Store.js setProductFilter to match criteria filtered by?
-    // Would be lowercase 'broadband' as we will normalize the results
+    /**
+     * Act - Use Store.js setProductFilter to match criteria filtered by
+     * broadband.
+     * Would be lowercase 'broadband' as we will normalize the results in the
+     * Store.js (in our app).
+     *
+     */
     storeUnitTest.setProductFilter('broadband');
     /**
      *  Assert - use expect assertion to compare results - Using toBe as it's
@@ -40,33 +58,21 @@ describe("filter", () => {
   });
 
   it("should return broadband & tv deals when filtered by that criteria", () => {
-    // Arrange
-    const storeUnitTest = new Store();
-    storeUnitTest.setDeals(mockData.deals);
     // Act
     // Assert
   });
 
   it("should return a broadband & mobile deal when filterd by that criteria", () => {
-    // Arrange
-    const storeUnitTest = new Store();
-    storeUnitTest.setDeals(mockData.deals);
     // Act
     // Assert
   });
 
   it("should return a sky deal when filtered by that criteria", () => {
-    // Arrange
-    const storeUnitTest = new Store();
-    storeUnitTest.setDeals(mockData.deals);
     // Act
     // Assert
   });
 
   it("should return bt, broadband & tv deals when filtered by that criteria", () => {
-    // Arrange
-    const storeUnitTest = new Store();
-    storeUnitTest.setDeals(mockData.deals);
     // Act
     // Assert
   });
