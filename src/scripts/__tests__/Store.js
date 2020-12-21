@@ -59,21 +59,29 @@ describe("filter", () => {
 
   it("should return broadband & tv deals when filtered by that criteria", () => {
     // Act
+    storeUnitTest.setProductFilter('broadband');
+    storeUnitTest.setProductFilter('tv');
     // Assert
   });
 
   it("should return a broadband & mobile deal when filterd by that criteria", () => {
     // Act
+    storeUnitTest.setProductFilter('broadband');
+    storeUnitTest.setProductFilter('mobile');
     // Assert
   });
 
   it("should return a sky deal when filtered by that criteria", () => {
-    // Act
+    // Act - Use the correct setProviderFilter fn and arg
+    storeUnitTest.setProviderFilter();
     // Assert
   });
 
   it("should return bt, broadband & tv deals when filtered by that criteria", () => {
     // Act
+    storeUnitTest.setProductFilter('broadband');
+    storeUnitTest.setProductFilter('tv');
+    storeUnitTest.setProviderFilter();
     // Assert
   });
 });
