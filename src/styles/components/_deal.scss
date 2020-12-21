@@ -1,4 +1,5 @@
 .deal {
+
   &__header {
     margin-bottom: 16px;
   }
@@ -14,6 +15,27 @@
 
   &__features {
     display: flex;
+    flex-direction: row;
+
+    @include xs {
+      flex-direction: column;
+    }
+
+    @include sm {
+      flex-direction: row;
+    }
+
+    @include md {
+      flex-direction: row;
+    }
+
+    @include lg {
+      flex-direction: row;
+    }
+
+    @include xl {
+      flex-direction: row;
+    }
   }
 
   &__feature {
