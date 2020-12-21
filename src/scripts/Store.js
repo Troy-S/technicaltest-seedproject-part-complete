@@ -60,7 +60,6 @@ class Store extends Observable {
     let categories = [...this.state.deals];
     let stateProductFilter = this.state.productFilters !=0;
     let stateProviderFilter = this.state.providerFilter;
-    let matchedProviderCriteria = categories.filter(deal => deal.provider.id === this.state.providerFilter);
     // If true...
     if (stateProductFilter) {
       // Filter deal based on categories (creating new array which pass the
@@ -76,6 +75,8 @@ class Store extends Observable {
         return prodMap === this.state.productFilters.sort().join(',').toLowerCase();
       })
     }
+
+    let matchedProviderCriteria = categories.filter(deal => deal.provider.id === this.state.providerFilter);
     // If true...
     if (stateProviderFilter) {
       // Assign our matched provider criteria to our categories object which
