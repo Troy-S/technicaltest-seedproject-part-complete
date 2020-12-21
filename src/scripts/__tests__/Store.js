@@ -22,31 +22,31 @@ describe("filter", () => {
     expect(result).toEqual(mockData.deals);
   });
 
-  it("should return ", () => {
+  it("should return broadband deals when filtered by broadband", () => {
     // Arrange
     // Act
     // Assert
   });
 
-  it("should return ", () => {
+  it("should return broadband & tv deals when filtered by that criteria", () => {
     // Arrange
     // Act
     // Assert
   });
 
-  it("should return ", () => {
+  it("should return a broadband & mobile deal when filterd by that criteria", () => {
     // Arrange
     // Act
     // Assert
   });
 
-  it("should return ", () => {
+  it("should return a sky deal when filtered by that criteria", () => {
     // Arrange
     // Act
     // Assert
   });
 
-  it("should return ", () => {
+  it("should return bt, broadband & tv deals when filtered by that criteria", () => {
     // Arrange
     // Act
     // Assert
