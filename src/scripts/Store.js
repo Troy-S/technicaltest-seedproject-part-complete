@@ -39,8 +39,37 @@ class Store extends Observable {
    * object expression to be expanded in places where zero or more key-value
    * pairs (for object literals) are expected.
    */
-    // return this.state.deals;
+
+   /** Logic
+   *
+   * Control flow: If we have productFilters items...
+   * 1. Filter out deals based on categories array (which will be our deal)
+   * 2. Assign a new products variable to filter our deal using another filter
+   *    on deal.ProductTypes (i.e. Mobile, Phone, Tv). Assigning it to an item
+   *    which we can map.
+   * 3. Using map we can take the item and run a ternary operator to call on
+   *    every item based on our criteria
+   * 4. Finally we want to return products if it matches our stores
+   *    productFilters (i.e. this.state.productFilters)
+   *
+   * Control flow: If providerFilters exists in our state (true)
+   * 1. We want to filter categories based on our initial Filter
+   * 2. Criteria: if our deals provider id equals our states providerFilter
+   * 3. Finally return our categories that we want to filter on via our UI.
+   */
+
     let categories = [...this.state.deals];
+    let stateProductFilter = this.state.productFilters !=0;
+    let stateProviderFilter = this.state.providerFilter;
+
+    if (stateProductFilter) {
+      //logic
+    }
+
+    if (stateProviderFilter) {
+      //logic
+    }
+
     return categories;
   }
 
