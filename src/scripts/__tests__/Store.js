@@ -12,12 +12,10 @@ import mockData from "../../../public/db.json";
  */
 
 describe("filter", () => {
-  /**
-   * After reading Jest docs it recommends using global beforeEach and pairing
-   * with afterEach, this is called the "setup" & "teardown" phase.
-   * This means we can remove a lot of our "Arrange" code to keep in line with
-   * DRY principles
-   */
+  // After reading Jest docs it recommends using global beforeEach and pairing
+  // with afterEach, this is called the "setup" & "teardown" phase.
+  // This means we can remove a lot of our "Arrange" code to keep in line with
+  // DRY principles
   let storeUnitTest;
   // Setup phase
   beforeEach(() => {
@@ -25,9 +23,10 @@ describe("filter", () => {
     storeUnitTest = new Store();
     storeUnitTest.setDeals(mockData.deals)
   });
+
   // Teardown phase
   afterEach(() => {
-    // storeUnitTest.unmount();
+    storeUnitTest.setDeals();
   });
 
   it("should return all deals when no filters applied", () => {
