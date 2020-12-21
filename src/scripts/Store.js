@@ -44,7 +44,7 @@ class Store extends Observable {
    *
    * Control flow: If we have productFilters items...
    * 1. Filter out deals based on categories array (which will be our deal)
-   * 2. Assign a new products variable to filter our deal using another filter
+   * 2. Assign a new prods variable to filter our deal using another filter
    *    on deal.ProductTypes (i.e. Mobile, Phone, Tv). Assigning it to an item
    *    which we can map.
    * 3. Using map we can take the item and run a ternary operator to call on
@@ -57,23 +57,33 @@ class Store extends Observable {
    * 2. Criteria: if our deals provider id equals our states providerFilter
    * 3. Finally return our categories that we want to filter on via our UI.
    */
-
     let categories = [...this.state.deals];
     let stateProductFilter = this.state.productFilters !=0;
     let stateProviderFilter = this.state.providerFilter;
-
+    let matchedProviderCriteria = categories.filter(deal => deal.provider.id === this.state.providerFilter);
+    // If true...
     if (stateProductFilter) {
-      //logic
-      // Filter deal based on categories
+      // Filter deal based on categories (creating new array which pass the
+      // criteria in the filter).
       categories = categories.filter(deal => {
-        console.log('Individual deals:', deal);
+        // Filter on deal.ProductTypes based on the item type and match criteria
+        let prods = deal.productTypes.filter(item => item != 'Phone');
+        // Map filtered prods item and call the ternary conditional based on
+        // criteria defined
+        let prodMap = prods.map(item => item.toLowerCase().indexOf('broadband') > -1 ? 'broadband' : item.toLowerCase()).sort().join(',');
+        // Return our products map if it strictly equals our state objects
+        // productFilters
+        return prodMap === this.state.productFilters.sort().join(',').toLowerCase();
       })
     }
-
+    // If true...
     if (stateProviderFilter) {
-      //logic
+      // Assign our matched provider criteria to our categories object which
+      // filters our deal based on whether the provider id matches our states
+      // providerFilter
+      categories = matchedProviderCriteria
     }
-
+    // Return our categories
     return categories;
   }
 

@@ -29,7 +29,7 @@ describe("filter", () => {
 
   // Teardown phase
   afterEach(() => {
-    storeUnitTest.unmount();
+    // storeUnitTest.unmount();
   });
 
   it("should return all deals when no filters applied", () => {
@@ -52,9 +52,9 @@ describe("filter", () => {
      *  Assert - use expect assertion to compare results - Using toBe as it's
      *  a primative type
      */
-    expect(storeUnitTest.deals.length).toBe(4)
+    expect(storeUnitTest.deals.length).toBe(4);
     // Manually check id's in (deals) db.json to do a deep equality test against
-    expect(storeUnitTest.deals[0].id).toEqual(6158)
+    expect(storeUnitTest.deals[0].id).toEqual(6158);
   });
 
   it("should return broadband & tv deals when filtered by that criteria", () => {
