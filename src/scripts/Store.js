@@ -64,6 +64,10 @@ class Store extends Observable {
 
     if (stateProductFilter) {
       //logic
+      // Filter deal based on categories
+      categories = categories.filter(deal => {
+        console.log('Individual deals:', deal);
+      })
     }
 
     if (stateProviderFilter) {
