@@ -69,14 +69,14 @@ class Store extends Observable {
         let prods = deal.productTypes.filter(item => item != 'Phone');
         // Map filtered prods item and call the ternary conditional based on
         // criteria defined
-        let prodMap = prods.map(item => item.toLowerCase().indexOf('broadband') > -1 ? 'broadband' : item.toLowerCase()).sort().join(',');
+        let prodMap = prods.map(item => item.toLowerCase().indexOf('broadband') > 0 ? 'broadband' : item.toLowerCase()).sort().join(',');
         // Return our products map if it strictly equals our state objects
         // productFilters
         return prodMap === this.state.productFilters.sort().join(',').toLowerCase();
       })
     }
 
-    let matchedProviderCriteria = categories.filter(deal => deal.provider.id === this.state.providerFilter);
+    let matchedProviderCriteria = categories.filter(deal => deal.provider.id === stateProviderFilter);
     // If true...
     if (stateProviderFilter) {
       // Assign our matched provider criteria to our categories object which

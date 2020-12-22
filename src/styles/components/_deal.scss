@@ -41,6 +41,10 @@
   &__feature {
     flex: 1 1 0;
     width: 0;
+
+    @include xs {
+      margin-bottom: 10px;
+    }
   }
 
   &__feature-label {
