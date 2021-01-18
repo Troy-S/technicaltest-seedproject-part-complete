@@ -2,184 +2,156 @@
   "deals": [
     {
       "id": 6158,
-      "title": "Sutter Home Vintage Reds",
+      "title": "Unlimited Broadband",
       "provider": {
         "id": 116,
-        "name": "Sutter Home"
+        "name": "Origin Broadband"
       },
       "cost": {
         "upfrontCost": 0.00,
-        "totalContractCost": 120
+        "totalContractCost": 233.88
       },
-      "productTypes": ["Red"],
+      "productTypes": ["Broadband", "Phone"],
       "contractLength": 12
     },
     {
       "id": 4359,
-      "title": "Eaglehawk Red Wine Collection",
+      "title": "Unlimited Broadband & Unlimited UK & Mobile Calls",
       "provider": {
         "id": 42,
-        "name": "Eaglehawk"
+        "name": "Plusnet"
       },
       "cost": {
-        "upfrontCost": 180,
-        "totalContractCost": 180
+        "upfrontCost": 10.00,
+        "totalContractCost": 383.87
       },
-      "productTypes": ["Red"],
-      "contractLength": 0
+      "productTypes": ["Broadband", "Phone"],
+      "contractLength": 18
     },
     {
       "id": 6074,
-      "title": "Gallo Red Wine Collection",
+      "title": "Starter + Unlimited Infinity 1 + Weekend Calls",
       "provider": {
         "id": 3,
-        "name": "Gallo"
+        "name": "BT"
       },
       "cost": {
-        "upfrontCost": 5,
-        "totalContractCost": 24
+        "upfrontCost": 34.99,
+        "totalContractCost": 436.87
       },
-      "productTypes": ["Red"],
-      "contractLength": 3
+      "productTypes": ["TV", "Phone", "Fibre Broadband"],
+      "contractLength": 12
     },
     {
       "id": 4371,
-      "title": "Eaglehawk White Wine Collection",
+      "title": "Unlimited Fibre Extra",
       "provider": {
         "id": 42,
-        "name": "Eaglehawk"
+        "name": "Plusnet"
       },
       "cost": {
         "upfrontCost": 25.00,
-        "totalContractCost": 450
+        "totalContractCost": 564.82
       },
-      "productTypes": ["White"],
+      "productTypes": ["Phone", "Fibre Broadband"],
       "contractLength": 18
     },
     {
       "id": 5459,
-      "title": "Eaglehawk Dark Reds Collection",
+      "title": "Unlimited Fibre Extra & Evening & Weekend UK & Mobile Calls",
       "provider": {
         "id": 42,
-        "name": "Eaglehawk"
+        "name": "Plusnet"
       },
       "cost": {
-        "upfrontCost": 20,
-        "totalContractCost": 120
+        "upfrontCost": 25.00,
+        "totalContractCost": 636.82
       },
-      "productTypes": ["Red"],
-      "contractLength": 6
+      "productTypes": ["Phone", "Broadband"],
+      "contractLength": 18
     },
     {
       "id": 5738,
-      "title": "Gallo White Collection",
+      "title": "Starter + Unlimited Broadband + Weekend Calls",
       "provider": {
         "id": 3,
-        "name": "Gallo"
+        "name": "BT"
       },
       "cost": {
-        "upfrontCost": 60,
-        "totalContractCost": 360
+        "upfrontCost": 59.99,
+        "totalContractCost": 383.87
       },
-      "productTypes": ["White"],
+      "productTypes": ["TV", "Broadband", "Phone"],
       "contractLength": 12
     },
     {
       "id": 6165,
-      "title": "Hardys Classic White Collection",
+      "title": "TV & Superfast Fibre & Weekend Calls",
       "provider": {
         "id": 48,
-        "name": "Hardys"
+        "name": "EE"
       },
       "cost": {
-        "upfrontCost": 150,
-        "totalContractCost": 150
+        "upfrontCost": 32.00,
+        "totalContractCost": 689.00
       },
-      "productTypes": ["White"],
-      "contractLength": 0
-    },
-    {
-      "id": 6166,
-      "title": "Hardys 2nd Classic White Collection",
-      "provider": {
-        "id": 48,
-        "name": "Hardys"
-      },
-      "cost": {
-        "upfrontCost": 160,
-        "totalContractCost": 160
-      },
-      "productTypes": ["White"],
-      "contractLength": 0
-    },
-    {
-      "id": 6165,
-      "title": "Hardys Classic Red Collection",
-      "provider": {
-        "id": 48,
-        "name": "Hardys"
-      },
-      "cost": {
-        "upfrontCost": 60,
-        "totalContractCost": 60
-      },
-      "productTypes": ["Red"],
-      "contractLength": 0
+      "productTypes": ["TV", "Phone", "Fibre Broadband"],
+      "contractLength": 18
     },
     {
       "id": 6468,
-      "title": "Changyu Vintage Red Collection",
+      "title": "Sports Bundle 2 Packs + Broadband Unlimited",
       "provider": {
         "id": 1,
-        "name": "Changyu"
+        "name": "Sky"
       },
       "cost": {
-        "upfrontCost": 50,
-        "totalContractCost": 550
+        "upfrontCost": 39.95,
+        "totalContractCost": 1263.77
       },
-      "productTypes": ["Red"],
-      "contractLength": 10
+      "productTypes": ["TV", "Broadband", "Phone"],
+      "contractLength": 18
     },
     {
       "id": 4529,
-      "title": "Gallo Modern Collection",
+      "title": "Unlimited BT Infinity 1 & Weekend Calls + BT Mobile + BT Sport Pack",
       "provider": {
         "id": 3,
-        "name": "Gallo"
+        "name": "BT"
       },
       "cost": {
-        "upfrontCost": 50,
-        "totalContractCost": 50
+        "upfrontCost": 34.99,
+        "totalContractCost": 577.87
       },
-      "productTypes": ["Mixed"],
-      "contractLength": 0
+      "productTypes": ["Phone", "Fibre Broadband", "Mobile", "TV"],
+      "contractLength": 12
     },
     {
       "id": 4530,
-      "title": "Gallo Mixed Collection",
+      "title": "Unlimited BT Infinity 2 + Weekend Calls + BT Mobile + BT Sport Pack",
       "provider": {
         "id": 3,
-        "name": "Gallo"
+        "name": "BT"
       },
       "cost": {
-        "upfrontCost": 200,
-        "totalContractCost": 200
+        "upfrontCost": 34.99,
+        "totalContractCost": 817.87
       },
-      "productTypes": ["Mixed"],
-      "contractLength": 0
+      "productTypes": ["Phone", "Broadband", "Mobile", "TV"],
+      "contractLength": 12
     },
     {
       "id": 4276,
-      "title": "Gallo Vintage Mixed Collection",
+      "title": "Unlimited Broadband + Weekend Calls + BT Mobile",
       "provider": {
         "id": 3,
-        "name": "Gallo"
+        "name": "BT"
       },
       "cost": {
         "upfrontCost": 9.99,
         "totalContractCost": 393.87
       },
-      "productTypes": ["Mixed"],
+      "productTypes": ["Broadband", "Phone", "Mobile"],
       "contractLength": 12
     }
   ]
