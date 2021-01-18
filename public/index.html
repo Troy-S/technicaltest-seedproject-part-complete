@@ -7,36 +7,14 @@
       content="width=device-width, initial-scale=1.0, viewport-fit=cover"
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
+    <title>Naked Wines</title>
     <link rel="stylesheet" href="styles/main.css" />
   </head>
   <body>
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      xmlns:xlink="http://www.w3.org/1999/xlink"
-      version="1.1"
-      style="display: none;"
-    >
-      <symbol id="icon-wifi" viewBox="0 0 48 48" aria-hidden="true">
-        <path
-          d="M2 17.113l4 4c9.94-9.94 26.06-9.94 36 0l4-4c-12.15-12.15-31.85-12.15-44 0zm16 16l6 6 6-6c-3.31-3.31-8.69-3.31-12 0zm-8-8l4 4c5.52-5.52 14.48-5.52 20 0l4-4c-7.73-7.73-20.27-7.73-28 0z"
-        />
-      </symbol>
-      <symbol id="icon-tv" viewBox="0 0 48 48" aria-hidden="true">
-        <path
-          d="M42 6c2.21 0 4 1.79 4 4l-.02 24c0 2.21-1.77 4-3.98 4H32v4H16v-4H6c-2.21 0-4-1.79-4-4V10c0-2.21 1.79-4 4-4h36zm0 28V10H6v24h36z"
-        />
-      </symbol>
-      <symbol id="icon-mobile" viewBox="0 0 48 48" aria-hidden="true">
-        <path
-          d="M32 2c2.76 0 5 2.24 5 5v34c0 2.76-2.24 5-5 5H16c-2.76 0-5-2.24-5-5V7c0-2.76 2.24-5 5-5h16zm-8 42c1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3 1.34 3 3 3zm9-8V8H15v28h18z"
-        />
-      </symbol>
-    </svg>
 
     <header class="site-header">
       <div class="site-trunk">
-        <h1 class="site-header__title">Decision Technologies</h1>
+        <h1 class="site-header__title">Naked Wines</h1>
       </div>
     </header>
 
@@ -52,10 +30,10 @@
                     class="filter__checkbox js-filter-product"
                     name="filter-product"
                     type="checkbox"
-                    value="broadband"
+                    value="red"
                     disabled="disabled"
                   />
-                  <span class="filter__label">Broadband</span>
+                  <span class="filter__label">Red</span>
                 </label>
 
                 <label class="filter">
@@ -63,10 +41,10 @@
                     class="filter__checkbox js-filter-product"
                     name="filter-product"
                     type="checkbox"
-                    value="mobile"
+                    value="white"
                     disabled="disabled"
                   />
-                  <span class="filter__label">Mobile</span>
+                  <span class="filter__label">White</span>
                 </label>
 
                 <label class="filter">
@@ -74,10 +52,10 @@
                     class="filter__checkbox js-filter-product"
                     name="filter-product"
                     type="checkbox"
-                    value="tv"
+                    value="mixed"
                     disabled="disabled"
                   />
-                  <span class="filter__label">TV</span>
+                  <span class="filter__label">Mixed</span>
                 </label>
               </div>
 
@@ -90,7 +68,7 @@
                     value="3"
                     disabled="disabled"
                   />
-                  <span class="filter__label">BT</span>
+                  <span class="filter__label">Gallo</span>
                 </label>
 
                 <label class="filter">
@@ -101,7 +79,7 @@
                     value="42"
                     disabled="disabled"
                   />
-                  <span class="filter__label">Plusnet</span>
+                  <span class="filter__label">Eaglehawk</span>
                 </label>
 
                 <label class="filter">
@@ -112,7 +90,7 @@
                     value="116"
                     disabled="disabled"
                   />
-                  <span class="filter__label">Origin Broadband</span>
+                  <span class="filter__label">Sutter Home</span>
                 </label>
 
                 <label class="filter">
@@ -123,7 +101,7 @@
                     value="48"
                     disabled="disabled"
                   />
-                  <span class="filter__label">EE</span>
+                  <span class="filter__label">Hardys</span>
                 </label>
 
                 <label class="filter">
@@ -134,9 +112,10 @@
                     value="1"
                     disabled="disabled"
                   />
-                  <span class="filter__label">Sky</span>
+                  <span class="filter__label">Changyu</span>
                 </label>
               </div>
+
             </div>
           </div>
           <div class="deals-container col">
@@ -149,7 +128,7 @@
     <footer class="site-footer">
       <div class="site-trunk">
         <span class="site-footer__colophon"
-          >&copy; 2016-2019 Decision Technologies. All Rights Reserved.</span
+          >&copy; 2021 Naked Wines. All Rights Reserved.</span
         >
       </div>
     </footer>
@@ -175,7 +154,7 @@
               <div class="deal__feature-value">{{ totalCost }}</div>
             </div>
             <div class="deal__feature col">
-              <div class="deal__feature-label">Contract Length</div>
+              <div class="deal__feature-label">Subscription Length</div>
               <div class="deal__feature-value">{{ contractLength }}</div>
             </div>
           </div>
@@ -188,12 +167,6 @@
 
     <script id="template-list-item" type="text/template">
       <li>{{ content }}</li>
-    </script>
-
-    <script id="template-icon" type="text/template">
-      <svg class="icon" aria-hidden="true">
-        <use xlink:href="{{ iconId }}"></use>
-      </icon>
     </script>
 
     <!-- Scripts -->

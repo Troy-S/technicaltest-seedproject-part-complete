@@ -2,7 +2,6 @@ class Template {
   constructor() {
     this.deal = document.getElementById("template-deal").innerHTML;
     this.listItem = document.getElementById("template-list-item").innerHTML;
-    this.icon = document.getElementById("template-icon").innerHTML;
     this.currencyFormatter = new Intl.NumberFormat("en-GB", {
       style: "currency",
       currency: "GBP",
@@ -22,11 +21,10 @@ class Template {
         "{{ totalCost }}",
         this.currencyFormatter.format(data.cost.totalContractCost)
       )
-      .replace("{{ contractLength }}", data.contractLength + " months")
-      .replace(
-        "{{ productList }}",
-        this.buildProductIconList(data.productTypes)
-      );
+      .replace("{{ contractLength }}",
+        data.contractLength > 0 ? data.contractLength + " months" : 'N/A'
+      )
+      .replace("{{ productList }}", data.productTypes);
   }
 
   buildListItem(content) {
@@ -38,38 +36,6 @@ class Template {
       const dealHtml = this.buildDeal(deal);
       return (result += this.buildListItem(dealHtml));
     }, "");
-  }
-
-  buildProductIconList(list) {
-    return list.reduce((result, product) => {
-      if (product === 'Phone') {
-        return result;
-      }
-      const iconId = this.getIconId(product);
-      const iconHtml = this.buildIcon(iconId);
-      return (result += this.buildListItem(iconHtml));
-    }, "");
-  }
-
-  buildIcon(id) {
-    return this.icon.replace("{{ iconId }}", id);
-  }
-
-  getIconId(name) {
-    let id;
-    switch (name) {
-      case "TV":
-        id = "tv";
-        break;
-      case "Broadband":
-      case "Fibre Broadband":
-        id = "wifi";
-        break;
-      case "Mobile":
-        id = "mobile";
-        break;
-    }
-    return `#icon-${id}`;
   }
 }
 
